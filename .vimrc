@@ -1,1 +1,1 @@
-/Users/mikeh/.vim/vimrc
+.vim/vimrc
