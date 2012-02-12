@@ -1,4 +1,7 @@
 " Avoid abbreviations!  Spelling everything out makes grepping easy.
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+" Bundle: tpope/vim-pathogen
+call pathogen#infect()
 
 " Load plugins using Pathogen. Don't worry if this bit doesn't make sense.
 " NOTE: Need to turn filetype on first so that vim doesn't exit with code 1.
@@ -77,9 +80,9 @@ end
 " Bundle: git://github.com/ciaranm/inkpot.git
 " Bundle: git://github.com/vim-scripts/gitignore.git
 "
-" BUNDLE: git://git.wincent.com/command-t.git
-"   If rvm is installed, make sure we compile command-t with the system ruby
-"   BUNDLE-COMMAND: if which rvm >/dev/null 2>&1; then rvm system exec rake make; else rake make; fi
+" #BUNDLE: git://git.wincent.com/command-t.git
+" #  If rvm is installed, make sure we compile command-t with the system ruby
+" #  BUNDLE-COMMAND: if which rvm >/dev/null 2>&1; then rvm system exec rake make; else rake make; fi
 
 " Programming:
 " # Bundle: git://github.com/scrooloose/nerdcommenter.git
