@@ -63,6 +63,8 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-haml'
+
+Bundle 'jcfaria/Vim-R-plugin'
 " --------------------------------------------------------------------------
 
 
