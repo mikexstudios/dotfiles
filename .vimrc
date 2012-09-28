@@ -65,6 +65,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-haml'
 
 Bundle 'jcfaria/Vim-R-plugin'
+let vimrplugin_underscore = 0 "disable _ convert to <-
 " --------------------------------------------------------------------------
 
 
