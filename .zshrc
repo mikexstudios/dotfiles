@@ -30,7 +30,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #plugins=(git rails ruby rbenv brew vundle)
-plugins=(git rails ruby brew gem osx autojump)
+plugins=(git rails ruby brew gem osx autojump django)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -38,4 +38,11 @@ source $ZSH/oh-my-zsh.sh
 #For rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:/usr/local/sbin:$PATH"
+
+#For node-js and installed modules
+export PATH="$PATH:/usr/local/share/npm/bin"
+export NODE_PATH="/usr/local/lib/node:/usr/local/lib/node_modules:/usr/local/share/npm/lib/node_modules"
+
+#For jmol
+export PATH="$HOME/bin/jmol-13.0.12:$PATH"
