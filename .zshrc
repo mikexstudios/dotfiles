@@ -10,6 +10,8 @@ ZSH_THEME="robbyrussell"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias tafel-archive="7z a data.7z *.bin *.txt && rm *.bin *.txt"
+alias gmvault-sync="gmvault sync mike.huynh@gmail.com --db-dir=~/Dropbox/Backup/gmvault/ --encrypt"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -46,3 +48,9 @@ export NODE_PATH="/usr/local/lib/node:/usr/local/lib/node_modules:/usr/local/sha
 
 #For jmol
 export PATH="$HOME/bin/jmol-13.0.12:$PATH"
+
+#For gmvault
+export PATH="$PATH:$HOME/bin/gmvault-v1.8.1-beta/bin"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
