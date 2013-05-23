@@ -51,6 +51,3 @@ export PATH="$HOME/bin/jmol-13.0.12:$PATH"
 
 #For gmvault
 export PATH="$PATH:$HOME/bin/gmvault-v1.8.1-beta/bin"
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
