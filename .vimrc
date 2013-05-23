@@ -59,6 +59,8 @@ Bundle 'msanders/snipmate.vim'
 Bundle 'scrooloose/snipmate-snippets'
 Bundle 'ervandew/supertab'
 Bundle 'kien/ctrlp.vim'
+nmap <leader>t :CtrlP<CR>
+nmap <leader>b :CtrlPClearCache<CR>
 
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
