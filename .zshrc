@@ -37,6 +37,10 @@ plugins=(git rails ruby brew gem osx autojump django)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+
+# Set global gitignore
+git config --global core.excludesfile ~/.gitignore-global
+
 #For rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
@@ -51,3 +55,9 @@ export PATH="$HOME/bin/jmol-13.0.12:$PATH"
 
 #For gmvault
 export PATH="$PATH:$HOME/bin/gmvault-v1.8.1-beta/bin"
+
+#For ec2-api-tools (installed with brew)
+export JAVA_HOME="$(/usr/libexec/java_home)"
+export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
+export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
+export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
