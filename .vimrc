@@ -65,6 +65,7 @@ nmap <leader>b :CtrlPClearCache<CR>
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-haml'
+Bundle 'vim-scripts/bats.vim'
 
 Bundle 'jcfaria/Vim-R-plugin'
 let vimrplugin_underscore = 0 "disable _ convert to <-

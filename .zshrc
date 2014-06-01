@@ -38,6 +38,10 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+# Explicitly set arch flag so that ruby gems and python packages that run gcc
+# don't fail when trying to compile to ppc.
+export ARCHFLAGS="-arch i386 -arch x86_64"
+
 # Set global gitignore
 git config --global core.excludesfile ~/.gitignore-global
 
@@ -61,3 +65,12 @@ export JAVA_HOME="$(/usr/libexec/java_home)"
 export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
 export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
+
+#For go
+export GOPATH="$HOME/.go"
+ 
+#For bats (bash testing)
+export PATH="$PATH:$HOME/bin/bats/bin"
+
+#For anaconda
+export PATH="$PATH:$HOME/Documents/Labs/miniconda/bin"
