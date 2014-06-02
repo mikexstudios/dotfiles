@@ -1,25 +1,44 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
 
-filetype plugin indent on     " required!
+Plugin 'ciaranm/inkpot'
+Plugin 'Raimondi/YAIFA'
+Plugin 'msanders/snipmate.vim'
+Plugin 'scrooloose/snipmate-snippets'
+Plugin 'ervandew/supertab'
+Plugin 'kien/ctrlp.vim'
+nmap <leader>t :CtrlP<CR>
+nmap <leader>b :CtrlPClearCache<CR>
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-haml'
+Plugin 'jcfaria/Vim-R-plugin'
+let vimrplugin_underscore = 0 "disable _ convert to <-
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
 " Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+" :PluginList          - list configured plugins
+" :PluginInstall(!)    - install (update) plugins
+" :PluginSearch(!) foo - search (or refresh cache first) for foo
+" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
 "
 " see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
+" Put your non-Plugin stuff after this line
 
-
-" Now you have a working Vim setup.  Customize everything from here on.
 
 " --------------------------------------------------------------------------
 " Don't create *.ext~ backup files.
@@ -51,25 +70,6 @@ set hlsearch          " hilight searches by default
 " etc.  http://github.com/bronson/vimsy/blob/master/vimrc is one example
 " --------------------------------------------------------------------------
  
-" --------------------------------------------------------------------------
-"  vundle bundles:
-Bundle 'ciaranm/inkpot'
-Bundle 'Raimondi/YAIFA'
-Bundle 'msanders/snipmate.vim'
-Bundle 'scrooloose/snipmate-snippets'
-Bundle 'ervandew/supertab'
-Bundle 'kien/ctrlp.vim'
-nmap <leader>t :CtrlP<CR>
-nmap <leader>b :CtrlPClearCache<CR>
-
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-haml'
-Bundle 'vim-scripts/bats.vim'
-
-Bundle 'jcfaria/Vim-R-plugin'
-let vimrplugin_underscore = 0 "disable _ convert to <-
-" --------------------------------------------------------------------------
 
 
 "" --------------------------------------------------------------------------
