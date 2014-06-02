@@ -10,6 +10,7 @@ ZSH_THEME="robbyrussell"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias mvim="mvim --remote-tab"
 alias tafel-archive="7z a data.7z *.bin *.txt && rm *.bin *.txt"
 alias gmvault-sync="gmvault sync mike.huynh@gmail.com --db-dir=~/Dropbox/Backup/gmvault/ --encrypt"
 
