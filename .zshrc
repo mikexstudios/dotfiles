@@ -12,7 +12,9 @@ ZSH_THEME="robbyrussell"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias mvim="mvim --remote-tab"
 alias tafel-archive="7z a data.7z *.bin *.txt && rm *.bin *.txt"
-alias gmvault-sync="gmvault sync mike.huynh@gmail.com --db-dir=~/Dropbox/Backup/gmvault/ --encrypt"
+alias odyssey-bkg="ssh -Y -C -o ServerAliveInterval=30 -fN odyssey"
+alias mosh-athena="mosh mxh@athena.dialup.mit.edu --server='athrun mosh_project mosh-server'"
+alias tunnel-ugcs="ssh -D localhost:8080 to.ugcs.caltech.edu"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
