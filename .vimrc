@@ -8,12 +8,15 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'ciaranm/inkpot'
 Plugin 'Raimondi/YAIFA'
+Plugin 'MarcWeber/vim-addon-mw-utils' "dependencies for snipmate
+Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'scrooloose/snipmate-snippets'
+Plugin 'honza/vim-snippets'
 Plugin 'ervandew/supertab'
 Plugin 'kien/ctrlp.vim'
 nmap <leader>t :CtrlP<CR>
