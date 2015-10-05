@@ -12,7 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'ciaranm/inkpot'
 Plugin 'Raimondi/YAIFA'
-Plugin 'msanders/snipmate.vim'
+Plugin 'garbas/vim-snipmate'
 Plugin 'scrooloose/snipmate-snippets'
 Plugin 'ervandew/supertab'
 Plugin 'kien/ctrlp.vim'
@@ -67,10 +67,13 @@ syntax on
 set nocompatible
 set incsearch         " find the next match as we type the search
 set hlsearch          " hilight searches by default
+
+set lisp "treat - as part of a word, good for css
 " etc.  http://github.com/bronson/vimsy/blob/master/vimrc is one example
 " --------------------------------------------------------------------------
- 
 
+" Treat <tab> as actual tab for Makefiles
+autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 
 "" --------------------------------------------------------------------------
 "" For latex-vim:

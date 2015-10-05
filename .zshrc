@@ -11,10 +11,16 @@ ZSH_THEME="robbyrussell"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias mvim="mvim --remote-tab"
+alias vimr="open -a VimR"
 alias tafel-archive="7z a data.7z *.bin *.txt && rm *.bin *.txt"
 alias odyssey-bkg="ssh -Y -C -o ServerAliveInterval=30 -fN odyssey"
 alias mosh-athena="mosh mxh@athena.dialup.mit.edu --server='athrun mosh_project mosh-server'"
 alias tunnel-ugcs="ssh -D localhost:8080 to.ugcs.caltech.edu"
+alias start-postgres="postgres -D /usr/local/var/postgres"
+alias python-webserver="python -m SimpleHTTPServer 8000"
+alias find-quote='find . -exec echo "\"{}\"" \;'
+alias docker-delete-old-containers="docker ps -q -a | xargs docker rm"
+alias docker-delete-untagged-images="docker rmi \$(docker images | grep \"^<none>\" | awk '{ print \$3 }')"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -53,14 +59,20 @@ alias tunnel-ugcs="ssh -D localhost:8080 to.ugcs.caltech.edu"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails ruby brew gem osx autojump django)
+plugins=(rbenv git rails ruby brew gem osx autojump django)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="$HOME/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+#For miniconda python distribution
+export PATH="$HOME/.miniconda/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
+# Use brew installed sqlite3 with readline support
+export PATH="/usr/local/Cellar/sqlite/3.8.11.1/bin:$PATH"
+# Android SDK
+export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -81,3 +93,13 @@ export ARCHFLAGS="-arch x86_64"
 
 # Set global gitignore
 git config --global core.excludesfile ~/.gitignore-global
+
+# For rbenv
+eval "$(rbenv init -)"
+#export RBENV_ROOT="$HOME/.rbenv"
+
+#For golang
+export GOPATH="$HOME/Labs/go"
+
+#For docker-compose.
+#export COMPOSE_FILE=dev.yml
