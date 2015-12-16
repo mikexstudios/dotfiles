@@ -11,6 +11,10 @@ ZSH_THEME="robbyrussell"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias mvim="mvim --remote-tab"
+if [ "$(uname)" = "Linux" ]; then
+  alias open="xdg-open"
+  alias mvim="gvim --remote-tab"
+fi
 alias vimr="open -a VimR"
 alias tafel-archive="7z a data.7z *.bin *.txt && rm *.bin *.txt"
 alias odyssey-bkg="ssh -Y -C -o ServerAliveInterval=30 -fN odyssey"
@@ -59,7 +63,7 @@ alias docker-delete-untagged-images="docker rmi \$(docker images | grep \"^<none
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rbenv git rails ruby brew gem osx autojump django)
+plugins=(rbenv git rails ruby brew gem osx autojump django npm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -98,8 +102,17 @@ git config --global core.excludesfile ~/.gitignore-global
 eval "$(rbenv init -)"
 #export RBENV_ROOT="$HOME/.rbenv"
 
+# For pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
 #For golang
 export GOPATH="$HOME/Labs/go"
 
 #For docker-compose.
 #export COMPOSE_FILE=dev.yml
+
+# For nvm (creationix/nvm)
+export NVM_DIR="/home/mikeh/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
