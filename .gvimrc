@@ -12,5 +12,5 @@ colorscheme inkpot
 "                              " tabs display filename correctly.
 set lines=54 " maximize the vertical direction on our screen.
 set columns=90 " set width of window.
-set guifont=Monaco:h11
+"set guifont=Monaco:h11
 set mousehide " Hide the mouse when typing text
