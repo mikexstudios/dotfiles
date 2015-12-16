@@ -21,6 +21,8 @@ alias python-webserver="python -m SimpleHTTPServer 8000"
 alias find-quote='find . -exec echo "\"{}\"" \;'
 alias docker-delete-old-containers="docker ps -q -a | xargs docker rm"
 alias docker-delete-untagged-images="docker rmi \$(docker images | grep \"^<none>\" | awk '{ print \$3 }')"
+alias hlr='heroku local:run'
+alias gmsync='gmvault sync --type quick --check-db no mike.huynh@gmail.com'
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -99,7 +101,9 @@ eval "$(rbenv init -)"
 #export RBENV_ROOT="$HOME/.rbenv"
 
 #For golang
-export GOPATH="$HOME/Labs/go"
+export GOPATH="$HOME/Documents/Labs/go"
+export PATH="$GOPATH/bin:$PATH"
+export GO15VENDOREXPERIMENT=1 # use go's new package management
 
 #For docker-compose.
 #export COMPOSE_FILE=dev.yml

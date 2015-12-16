@@ -24,8 +24,10 @@ nmap <leader>b :CtrlPClearCache<CR>
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-haml'
-Plugin 'jcfaria/Vim-R-plugin'
-let vimrplugin_underscore = 0 "disable _ convert to <-
+" Plugin 'jcfaria/Vim-R-plugin'
+" let vimrplugin_underscore = 0 "disable _ convert to <-
+Plugin 'tpope/vim-commentary'
+Plugin 'fatih/vim-go' "run :GoInstallBinaries afterwards
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -51,12 +53,12 @@ set nowritebackup    " No backup files during editing.
 set nowrap
 " set textwidth=78
 
-" Tab settings (for python)
-set tabstop=4    " 4-space indents.
-set shiftwidth=4    " Allow use of < and > in visual mode to block
+" Tab settings
+set tabstop=2    " 4-space indents.
+set shiftwidth=2    " Allow use of < and > in visual mode to block
                     " indent/unindent.
 set expandtab    " Use spaces instead of <TAB> character.
-set softtabstop=4    " Backspace deletes 4 spaces (views it as a tab).
+set softtabstop=2    " Backspace deletes 4 spaces (views it as a tab).
 set autoindent    " Indents should match that of previous line.
  
 " Make auto complete a bit more bash-like
