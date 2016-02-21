@@ -19,8 +19,6 @@ Plugin 'scrooloose/snipmate-snippets'
 Plugin 'honza/vim-snippets'
 Plugin 'ervandew/supertab'
 Plugin 'kien/ctrlp.vim'
-nmap <leader>t :CtrlP<CR>
-nmap <leader>b :CtrlPClearCache<CR>
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-haml'
@@ -28,6 +26,8 @@ Plugin 'tpope/vim-haml'
 " let vimrplugin_underscore = 0 "disable _ convert to <-
 Plugin 'tpope/vim-commentary'
 Plugin 'fatih/vim-go' "run :GoInstallBinaries afterwards
+Plugin 'pangloss/vim-javascript' "dependency for vim-jsx
+Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -102,3 +102,8 @@ autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 "  map <Leader>n :NERDTreeToggle<CR>
 "end
 "" --------------------------------------------------------------------------
+
+" For CtrP
+nmap <leader>t :CtrlP<CR>
+nmap <leader>b :CtrlPClearCache<CR>
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']

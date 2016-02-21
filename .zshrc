@@ -107,7 +107,7 @@ eval "$(rbenv init -)"
 # For pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 #For golang
 export GOPATH="$HOME/Documents/Labs/go"
@@ -118,5 +118,5 @@ export GO15VENDOREXPERIMENT=1 # use go's new package management
 #export COMPOSE_FILE=dev.yml
 
 # For nvm (creationix/nvm)
-export NVM_DIR="/home/mikeh/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
