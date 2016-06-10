@@ -11,13 +11,13 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'ciaranm/inkpot'
-Plugin 'Raimondi/YAIFA'
-Plugin 'MarcWeber/vim-addon-mw-utils' "dependencies for snipmate
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'scrooloose/snipmate-snippets'
-Plugin 'honza/vim-snippets'
-Plugin 'ervandew/supertab'
+" Plugin 'Raimondi/YAIFA'
+" Plugin 'MarcWeber/vim-addon-mw-utils' "dependencies for snipmate
+" Plugin 'tomtom/tlib_vim'
+" Plugin 'garbas/vim-snipmate'
+" Plugin 'scrooloose/snipmate-snippets'
+" Plugin 'honza/vim-snippets'
+" Plugin 'ervandew/supertab'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
@@ -28,6 +28,10 @@ Plugin 'tpope/vim-commentary'
 Plugin 'fatih/vim-go' "run :GoInstallBinaries afterwards
 Plugin 'pangloss/vim-javascript' "dependency for vim-jsx
 Plugin 'mxw/vim-jsx'
+if v:version > 704
+  Plugin 'Valloric/YouCompleteMe'
+endif
+" Plugin 'ajh17/VimCompletesMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -81,6 +85,10 @@ set lisp "treat - as part of a word, good for css
 autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 
 "" --------------------------------------------------------------------------
+
+" Set .md files as markdown. Fixed in newer versions of vim.
+autocmd BufNewFile,BufRead *.md set filetype=markdown
+
 "" For latex-vim:
 "" IMPORTANT: grep will sometimes skip displaying the file name if you
 "" search in a singe file. This will confuse Latex-Suite. Set your grep

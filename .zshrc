@@ -23,8 +23,8 @@ alias tunnel-ugcs="ssh -D localhost:8080 to.ugcs.caltech.edu"
 alias start-postgres="postgres -D /usr/local/var/postgres"
 alias python-webserver="python -m SimpleHTTPServer 8000"
 alias find-quote='find . -exec echo "\"{}\"" \;'
-alias docker-delete-old-containers="docker ps -q -a | xargs docker rm"
-alias docker-delete-untagged-images="docker rmi \$(docker images | grep \"^<none>\" | awk '{ print \$3 }')"
+alias docker-delete-old-containers="docker rm \$(docker ps -a -q)"
+alias docker-delete-untagged-images="docker rmi \$(docker images -q -f dangling=true)"
 alias hlr='heroku local:run'
 alias gmsync='gmvault sync --type quick --check-db no mike.huynh@gmail.com'
 
@@ -71,9 +71,10 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-#For miniconda python distribution
-export PATH="$HOME/.miniconda/bin:$PATH"
+export PATH="$HOME/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+# For miniconda python distribution
+# NOTE: No longer needed since we manage python with pyenv
+# export PATH="$HOME/.miniconda/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 # Use brew installed sqlite3 with readline support
 export PATH="/usr/local/Cellar/sqlite/3.8.11.1/bin:$PATH"
@@ -101,8 +102,8 @@ export ARCHFLAGS="-arch x86_64"
 git config --global core.excludesfile ~/.gitignore-global
 
 # For rbenv
+export RBENV_ROOT="$HOME/.rbenv"
 eval "$(rbenv init -)"
-#export RBENV_ROOT="$HOME/.rbenv"
 
 # For pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -112,7 +113,6 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 #For golang
 export GOPATH="$HOME/Documents/Labs/go"
 export PATH="$GOPATH/bin:$PATH"
-export GO15VENDOREXPERIMENT=1 # use go's new package management
 
 #For docker-compose.
 #export COMPOSE_FILE=dev.yml
