@@ -15,6 +15,7 @@ if [ "$(uname)" = "Linux" ]; then
   alias open="xdg-open"
   alias mvim="gvim --remote-tab"
 fi
+alias code="code -r"
 alias vimr="open -a VimR"
 alias tafel-archive="7z a data.7z *.bin *.txt && rm *.bin *.txt"
 alias odyssey-bkg="ssh -Y -C -o ServerAliveInterval=30 -fN odyssey"
