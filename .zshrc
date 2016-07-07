@@ -66,7 +66,8 @@ alias gmsync='gmvault sync --type quick --check-db no mike.huynh@gmail.com'
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rbenv git rails ruby brew gem osx autojump django npm)
+#plugins=(rbenv git rails ruby brew gem osx autojump django npm)
+plugins=(autojump git osx npm)
 
 source $ZSH/oh-my-zsh.sh
 
