@@ -21,14 +21,14 @@ Plugin 'ciaranm/inkpot'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-haml'
+" Plugin 'tpope/vim-haml'
 " Plugin 'jcfaria/Vim-R-plugin'
 " let vimrplugin_underscore = 0 "disable _ convert to <-
 Plugin 'tpope/vim-commentary'
 Plugin 'fatih/vim-go' "run :GoInstallBinaries afterwards
 Plugin 'pangloss/vim-javascript' "dependency for vim-jsx
 Plugin 'mxw/vim-jsx'
-if v:version > 704
+if v:version >= 704
   Plugin 'Valloric/YouCompleteMe'
 endif
 " Plugin 'ajh17/VimCompletesMe'
@@ -115,3 +115,9 @@ autocmd BufNewFile,BufRead *.md set filetype=markdown
 nmap <leader>t :CtrlP<CR>
 nmap <leader>b :CtrlPClearCache<CR>
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+" For YouCompleteMe
+" Close preview window after completion
+let g:ycm_add_preview_to_completeopt = 1
+" let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
