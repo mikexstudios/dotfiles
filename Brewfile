@@ -6,6 +6,8 @@ tap 'homebrew/dupes'
 tap 'homebrew/science'
 tap 'neovim/neovim'
 
+brew 'zsh'
+brew 'zsh-completions'
 brew 'ansible'
 brew 'autojump'
 brew 'git'
