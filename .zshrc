@@ -28,6 +28,7 @@ alias docker-delete-old-containers="docker rm \$(docker ps -a -q)"
 alias docker-delete-untagged-images="docker rmi \$(docker images -q -f dangling=true)"
 alias hlr='heroku local:run'
 alias gmsync='gmvault sync --type quick --check-db no mike.huynh@gmail.com'
+alias dcr='docker-compose run --rm'
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -122,3 +123,7 @@ export PATH="$GOPATH/bin:$PATH"
 # For nvm (creationix/nvm)
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# For brew cask
+# (Migrating the Caskroom location is tough right now, so override)
+#export HOMEBREW_CASK_OPTS="--caskroom=/opt/homebrew-cask/Caskroom"
