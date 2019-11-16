@@ -99,22 +99,28 @@ alias vimr="open -a VimR"
 alias tafel-archive="7z a data.7z *.bin *.txt && rm *.bin *.txt"
 alias odyssey-bkg="ssh -Y -C -o ServerAliveInterval=30 -fN odyssey"
 alias mosh-athena="mosh mxh@athena.dialup.mit.edu --server='athrun mosh_project mosh-server'"
-alias tunnel-ugcs="ssh -D localhost:8080 to.ugcs.caltech.edu"
+alias tunnel-ugcs="ssh -D localhost:8080 shell02.ugcs.caltech.edu"
 alias start-postgres="postgres -D /usr/local/var/postgres"
-alias python-webserver="python -m SimpleHTTPServer 8000"
+alias python-webserver="python -m http.server --bind 127.0.0.1"
 alias find-quote='find . -exec echo "\"{}\"" \;'
 alias docker-delete-old-containers="docker rm \$(docker ps -a -q)"
 alias docker-delete-untagged-images="docker rmi \$(docker images -q -f dangling=true)"
 alias hlr='heroku local:run'
 alias gmsync='gmvault sync --type quick --check-db no mike.huynh@gmail.com'
 alias dcr='docker-compose run --rm'
+# Using force apparently makes the "25" setting transient.
+alias hibernate-now="sudo pmset -a force 1 -a hibernationmode 25 && sudo shutdown -s now"
+#alias hiberate-on="sudo pmset -a hibernationmode 25"
+#alias hiberate-off="sudo pmset -a hibernationmode 3"
+# For pipenv
+alias prp="pipenv run python"
 
 # Set global gitignore
 git config --global core.excludesfile ~/.gitignore-global
 
 # For rbenv
-export RBENV_ROOT="$HOME/.rbenv"
-eval "$(rbenv init -)"
+#export RBENV_ROOT="$HOME/.rbenv"
+#eval "$(rbenv init -)"
 
 # For pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -122,8 +128,10 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 #For golang
-export GOPATH="$HOME/Documents/Labs/go"
+export GOPATH="$HOME/dev/go"
 export PATH="$GOPATH/bin:$PATH"
+# GOROOT install location:
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 #For docker-compose.
 #export COMPOSE_FILE=dev.yml
