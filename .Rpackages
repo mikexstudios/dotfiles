@@ -1,6 +1,0 @@
-list(
-    default = function(x) {
-        file.path("~/Documents/Labs/", x, x)
-    }, 
-    "rplothelper" = "~/Documents/Labs/noceracode/rplothelper"
-)
