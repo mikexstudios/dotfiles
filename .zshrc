@@ -5,6 +5,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Base configurations
+export PATH="${HOME}/bin:${PATH}"
 export EDITOR="vim"
 
 # Aliases
