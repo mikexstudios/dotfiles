@@ -24,6 +24,12 @@ set up any one-time configuration.
 ./.setup.sh
 ```
 
+Remember to update default editor:
+
+```
+sudo update-alternatives --config editor
+```
+
 ## Usage
 
 - When adding a few dotfile: `git add -f .my-dot-file`. The `-f` is needed
