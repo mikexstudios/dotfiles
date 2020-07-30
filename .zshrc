@@ -9,7 +9,9 @@ export PATH="${HOME}/bin:${PATH}"
 export EDITOR="vim"
 
 # Aliases
-# TODO: Add pyenv, golang, nvm.
+alias python-server="python3 -m http.server 8000"
+
+# TODO: Add pyenv, golang.
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
