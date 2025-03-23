@@ -2,7 +2,7 @@
 #  Sets up a remote server with common tools.
 set -Eeuo pipefail
 
-sudo apt update && sudo apt upgrade
+sudo apt update && sudo apt full-upgrade
 
 sudo apt install git tmux vim htop mosh
 

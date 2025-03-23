@@ -7,7 +7,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 call plug#begin('~/.vim/plugged')
-Plug 'ciaranm/inkpot'
+Plug 'tomasr/molokai' " remember to set color scheme below
 Plug 'tpope/vim-commentary'
 Plug 'lifepillar/vim-mucomplete'
 call plug#end()
@@ -21,6 +21,7 @@ set number
 highlight LineNr ctermfg=grey
 set colorcolumn=80,100
 highlight colorcolumn ctermbg=grey guibg=grey
+colorscheme molokai
 
 " Indent and tab
 set autoindent " indent according to previous line
